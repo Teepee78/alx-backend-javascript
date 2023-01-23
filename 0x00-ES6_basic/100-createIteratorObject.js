@@ -11,15 +11,15 @@ export default function createIteratorObject(report) {
             const current = allEmployees[deptIndex];
 
             if (i < current.length) {
-              i++;
+              i += 1;
               return { done: false, value: current[i - 1] };
             }
             i = 1;
-            deptIndex++;
+            deptIndex += 1;
 
             if (
               deptIndex < report.getNumberOfDepartments()
-								&& allEmployees[deptIndex][0]
+                && allEmployees[deptIndex][0]
             ) {
               return { done: false, value: allEmployees[deptIndex][0] };
             }
