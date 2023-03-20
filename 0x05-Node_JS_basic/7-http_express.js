@@ -3,7 +3,7 @@ const fs = require('fs');
 
 const database = process.argv[2].toString();
 
-function countStudents (path) {
+function countStudents(path) {
   return new Promise((resolve, reject) => {
     fs.readFile(path, { encoding: 'utf8' }, (err, data) => {
       if (err) reject(Error('Cannot load the database'));
