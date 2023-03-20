@@ -1,5 +1,4 @@
-function displayMessage(message) {
-  // process.stdout.write(message + '\n');
+function displayMessage (message) {
   console.log(message);
 }
 
