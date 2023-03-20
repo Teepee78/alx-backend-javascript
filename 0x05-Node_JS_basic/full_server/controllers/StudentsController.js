@@ -1,4 +1,5 @@
-import readDatabase from '../utils.js';
+// import readDatabase from '../utils.js';
+const readDatabase = require('../utils');
 
 class StudentsController {
   static getAllStudents(request, response) {
@@ -33,4 +34,4 @@ class StudentsController {
   }
 }
 
-export default StudentsController;
+module.exports = StudentsController;
