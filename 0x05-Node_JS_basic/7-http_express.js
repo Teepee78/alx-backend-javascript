@@ -50,13 +50,13 @@ app.get('/students', (req, res) => {
     .then((response) => {
       res.send([
         'This is the list of our students',
-        ...response
+        ...response,
       ].join('\n'));
     })
     .catch(() => {
       res.send([
         'This is the list of our students',
-        'Cannot load the database'
+        'Cannot load the database',
       ].join('\n'));
     });
 });

@@ -49,7 +49,7 @@ const app = http.createServer((req, res) => {
       .then((response) => {
         res.write('This is the list of our students\n');
         for (const line of response) {
-          res.write(line + '\n');
+          res.write(`${line}\n`);
         }
         res.end();
       })
