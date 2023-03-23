@@ -68,11 +68,12 @@ describe("login page", function() {
 	const options = {
 		url: "http://localhost:7865/login",
 		method: "POST",
+		json: true,
 		body: {userName: "John"}
 	};
 
   it("check correct status code", function(done) {
-		request(options, function(err, res, body) {
+		request(options, function (err, res, body) {
 	    expect(res.statusCode).to.equal(200);
 	    done();
 		});
@@ -80,7 +81,7 @@ describe("login page", function() {
 
   it("check correct content", function(done) {
 		request(options, function(err, res, body) {
-	    expect(body).to.contain("Welcome John");
+	    expect(body).to.equal("Welcome John");
 	    done();
 		});
   });
@@ -90,7 +91,8 @@ describe("login page", function() {
 describe("available_payments page", function() {
 	const options = {
 		url: "http://localhost:7865/available_payments",
-		method: "GET"
+		method: "GET",
+		json: true
 	};
 
   it("check correct status code", function(done) {
