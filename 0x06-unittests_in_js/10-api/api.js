@@ -2,6 +2,7 @@ const express = require('express');
 
 
 app = express();
+app.use(express.json());
 
 app.get('/', (req, res) => {
 	return res.send('Welcome to the payment system');
